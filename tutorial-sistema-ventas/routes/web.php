@@ -6,6 +6,7 @@ use App\Http\Controllers\EspecialidadController;
 use App\Http\Controllers\MedicoController;
 use App\Http\Controllers\PacienteController;
 use App\Http\Controllers\PerfilController;
+use App\Http\Controllers\ProductoController;
 use App\Http\Controllers\RecuperarClaveController;
 use App\Http\Controllers\UsuarioController;
 use App\Models\Usuario;
@@ -44,8 +45,11 @@ Route::get("eliminar-fot-perfil", [PerfilController::class, "eliminarFotoPerfil"
 Route::put("actualizar-datos-perfil", [PerfilController::class, "actualizarDatos"])->name("perfil.actulizarDatos")->middleware('verified');
 
 
-//empresa
+//rutas de la empresa
 Route::get('empresa-index',[EmpresaController::class,'index'])->name('empresa.index')->middleware('verified');
 Route::post('empresa-update-{id}',[EmpresaController::class,'update'])->name('empresa.update')->middleware('verified');
 Route::post("actualizar-logo", [EmpresaController::class, "actualizarLogo"])->name("empresa.actualizarLogo")->middleware('verified');
 Route::delete("eliminar-logo", [EmpresaController::class, "eliminarLogo"])->name("empresa.eliminarLogo")->middleware('verified');
+
+//rutas del procuctos
+Route::resource('productos', ProductoController::class)->middleware('verified');

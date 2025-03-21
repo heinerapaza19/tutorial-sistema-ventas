@@ -14,7 +14,7 @@
         {{-- token --}}
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
-        <link href="https://tresplazas.com/web/img/big_punto_de_venta.png" rel="shortcut icon">
+        
         <link href="{{asset('app/publico/css/lib/font-awesome/font-awesome.min.css')}}" rel="stylesheet">
         <link href="{{asset('bootstrap5/css/bootstrap.min.css')}}" rel="stylesheet"
             integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
@@ -189,15 +189,15 @@
 
                 <li class="grey with-sub {{ Request::is('cita*') ? 'opened' : ''}}">
                     <span>
-                        <img src="{{asset('img-inicio/programar.png')}}" class="img-inicio" alt="">
+                        <img src="{{asset('img-inicio/agregar.png')}}" class="img-inicio" alt="">
                         {{-- <i class="fas fa-sort-amount-up-alt"></i> --}}
-                        <span class="lbl">CITAS</span>
+                        <span class="lbl">REGISTROS</span>
                     </span>
                     <ul>
                         <li>
-                            <a href="" class="{{ Request::is('cita-create*') ? 'activo' : ''}}">
+                            <a href="{{route('productos.create')}}" class="{{ Request::is('cita-create*') ? 'activo' : ''}}">
                                 <i class="fas fa-plus-square icono-submenu"></i>
-                                <span class="lbl">Registrar cita</span>
+                                <span class="lbl">Registrar productos</span>
                             </a>
                         </li>
                         <li>

@@ -34,7 +34,6 @@
 
 {{-- notificaciones --}}
 
-
 @if (session('CORRECTO'))
 <script>
     $(function notificacion() {
@@ -47,8 +46,6 @@
     });
 </script>
 @endif
-
-
 
 @if (session('INCORRECTO'))
 <script>

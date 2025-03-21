@@ -10,7 +10,6 @@
     <link href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('fontawesome/css/all.min.css') }}">
     <link rel="stylesheet" href="{{ asset('fontawesome/css/fontawesome.min.css') }}">
-    <link href="https://tresplazas.com/web/img/big_punto_de_venta.png" rel="shortcut icon">
     <title>Inicio de sesión</title>
 </head>
 
